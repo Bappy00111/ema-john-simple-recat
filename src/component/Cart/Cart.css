@@ -1,0 +1,44 @@
+.cart {
+    background-color: #FF99004D;
+    width: 264px;
+    height: 944px;
+    position: sticky;
+    top: 0;
+
+}
+
+.cart h2 {
+    text-align: center;
+}
+
+.order-name {
+    margin-bottom: 40px;
+    padding-top: 10px;
+}
+
+.cart p {
+    margin-bottom: 10px;
+    text-align: none;
+    padding-left: 20px;
+    font-size: 17px;
+}
+
+.btn-clear {
+    width: 232px;
+    height: 48px;
+    background-color: #FF3030;
+    margin-left: 16px;
+    margin-right: 16px;
+    border: none;
+   
+}
+.btn-order{
+    margin-top: 10px;
+    width: 232px;
+    height: 48px;
+    background-color: #FF9900;
+    margin-left: 16px;
+    margin-right: 16px;
+    border: none;
+
+}
