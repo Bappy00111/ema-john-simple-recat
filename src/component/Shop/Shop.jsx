@@ -22,6 +22,7 @@ const Shop = () => {
 
     useEffect(()=>{
         const storedCart = getShoppingCart();
+        console.log(storedCart)
         const savedCart = []
         // step 1 
         for(const id in storedCart){

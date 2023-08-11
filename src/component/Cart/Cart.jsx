@@ -2,6 +2,7 @@ import React from 'react';
 import './Cart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 const Cart = ({ cart }) => {
     // console.log(cart)
@@ -14,7 +15,7 @@ const Cart = ({ cart }) => {
         // product.quantity = product.quantity || 1;
 
         // step two 
-        if(product.quantity === 0){
+        if (product.quantity === 0) {
             product.quantity = 1;
         }
 
@@ -36,12 +37,13 @@ const Cart = ({ cart }) => {
             <p>Grand Total: $ {grandTotal}</p>
             <button className='btn-clear'>
                 Clear Cart
-                <span > <FontAwesomeIcon icon={faTrash} /></span>
+                <Link> <span > <FontAwesomeIcon icon={faTrash} /></span></Link>
             </button>
-            <button className='btn-order'>
-                Review Order
-                <span > <FontAwesomeIcon icon={faArrowCircleRight} /></span>
-            </button>
+           
+                <button className='btn-order'> Review Order
+                    <Link to='/orderReview'> <FontAwesomeIcon icon={faArrowCircleRight} /></Link>
+                </button>
+            
         </div>
 
     );
