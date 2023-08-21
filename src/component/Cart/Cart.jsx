@@ -40,8 +40,8 @@ const Cart = ({ cart }) => {
                 <Link> <span > <FontAwesomeIcon icon={faTrash} /></span></Link>
             </button>
            
-                <button className='btn-order'> Review Order
-                    <Link to='/orderReview'> <FontAwesomeIcon icon={faArrowCircleRight} /></Link>
+                <button className='btn-order'> proced ChakOut
+                    <Link to='/chakout'> <FontAwesomeIcon icon={faArrowCircleRight} /></Link>
                 </button>
             
         </div>
