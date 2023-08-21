@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css'
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContaxt } from '../../Provider/AuthProvider';
 
@@ -8,7 +8,11 @@ const Login = () => {
     const {singIn} = useContext(AuthContaxt)
     const [error,setError] = useState('')
     const [succes,setSucces] = useState('')
+    const navegate = useNavigate();
+    const location = useLocation()
+    console.log(location)
 
+    const from = location.state?.from?.pathName || '/'
 
     const handelLogin = event =>{
         event.preventDefault();
@@ -25,6 +29,7 @@ const Login = () => {
             setSucces('Your email success')
             setError('')
             from.reset('')
+            navegate('from')
         })
        .catch(error =>{
         console.log(error.message)
