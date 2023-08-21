@@ -15,6 +15,7 @@ import Login from './component/Login/Login.jsx';
 import cartProductsLoader from './CardProductLoder/CardProdutLoder.js';
 import SingUp from './component/SingUp/SingUp.jsx';
 import AuthProvider from './Provider/AuthProvider.jsx';
+import PrivetRoutes from './routes/PrivetRoutes.jsx';
 
 
 
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/chakout",
-        element: <Inventory></Inventory>
+        element: <PrivetRoutes><Inventory></Inventory></PrivetRoutes>
       },
       {
         path: '/login',

@@ -10,6 +10,7 @@ export const AuthContaxt = createContext(null)
 const auth = getAuth(app);
 const AuthProvider = ({children}) => {
     const [user,setUser] = useState(null)
+    const [lodding,setLoddig] = useState(true);
 
     const crateUser = (email,password) =>{
         return createUserWithEmailAndPassword(auth,email,password)
@@ -27,6 +28,7 @@ const AuthProvider = ({children}) => {
     useEffect(()=>{
      const unsubscribe =    onAuthStateChanged(auth,currentUser =>{
             setUser(currentUser)
+            setLoddig(false)
         })
         // stop observing while unmunting
         return () =>{
@@ -37,7 +39,8 @@ const AuthProvider = ({children}) => {
         user,
         crateUser,
         singIn,
-        logOut
+        logOut,
+        lodding
     }
     return (
         <AuthContaxt.Provider value={authInfo}>

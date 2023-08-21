@@ -19,7 +19,7 @@ const Header = () => {
             <div>
                 <Link to="/">Shop</Link>
                 <Link to="/orderReview">Order Review</Link>
-                <Link to="/chakout">Inventory</Link>
+                <Link to="/chakout">ChakOut</Link>
                 <Link to="/login">Login</Link>
                 <Link to="/singup">SingUp</Link>
                 {
