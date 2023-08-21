@@ -13,11 +13,12 @@ const AuthProvider = ({children}) => {
     const [lodding,setLoddig] = useState(true);
 
     const crateUser = (email,password) =>{
+        setLoddig(true)
         return createUserWithEmailAndPassword(auth,email,password)
     }
 
     const singIn = (email,password) =>{
-        
+        setLoddig(true)
         return signInWithEmailAndPassword(auth,email,password)
     }
 
